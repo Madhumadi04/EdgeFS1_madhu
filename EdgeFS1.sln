@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EdgeFS1", "EdgeFS1\EdgeFS1.vcxproj", "{C8577E08-7132-488C-ADCC-4F799F6F9EE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|VisualGDB = Debug|VisualGDB
+		Release|VisualGDB = Release|VisualGDB
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8577E08-7132-488C-ADCC-4F799F6F9EE9}.Debug|VisualGDB.ActiveCfg = Debug|VisualGDB
+		{C8577E08-7132-488C-ADCC-4F799F6F9EE9}.Debug|VisualGDB.Build.0 = Debug|VisualGDB
+		{C8577E08-7132-488C-ADCC-4F799F6F9EE9}.Release|VisualGDB.ActiveCfg = Release|VisualGDB
+		{C8577E08-7132-488C-ADCC-4F799F6F9EE9}.Release|VisualGDB.Build.0 = Release|VisualGDB
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87BFE388-A07D-4DD5-BFF4-CD907176EFB4}
+	EndGlobalSection
+EndGlobal

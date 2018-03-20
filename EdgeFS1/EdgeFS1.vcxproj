@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|VisualGDB">
+      <Configuration>Debug</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|VisualGDB">
+      <Configuration>Release</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{C8577E08-7132-488C-ADCC-4F799F6F9EE9}</ProjectGuid>
+    <BSP_ID>com.sysprogs.arm.stm32</BSP_ID>
+    <BSP_VERSION>4.5R3</BSP_VERSION>
+    <InPlaceBSPSubdir />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <GNUConfigurationType>Debug</GNUConfigurationType>
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>7.2.0/8.0.1/r2</ToolchainVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>7.2.0/8.0.1/r2</ToolchainVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>Inc;../../../../Documents/cubemx/STM32Cube_FW_F4_V1.18.0/Drivers/CMSIS/Include;../../../../Documents/cubemx/STM32Cube_FW_F4_V1.18.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include;../../../../Documents/cubemx/STM32Cube_FW_F4_V1.18.0/Drivers/STM32F4xx_HAL_Driver/Inc;../../../../Documents/cubemx/STM32Cube_FW_F4_V1.18.0/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>flash_layout;STM32F415xx;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions />
+      <CLanguageStandard />
+      <CPPLanguageStandard />
+    </ClCompile>
+    <Link>
+      <LibrarySearchDirectories>../../../../Documents/cubemx/STM32Cube_FW_F4_V1.18.0;%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <AdditionalLinkerInputs>;%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <AdditionalOptions />
+      <LinkerScript />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\EdgeFSBasic\Inc;D:\Data\ARM\STM32CubeF4\Drivers\CMSIS\Include;D:\Data\ARM\STM32CubeF4\Drivers\CMSIS\Device\ST\STM32F4xx\Include;D:\Data\ARM\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc;D:\Data\ARM\STM32CubeF4\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>flash_layout;STM32F415xx;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions />
+      <CLanguageStandard />
+      <CPPLanguageStandard />
+    </ClCompile>
+    <Link>
+      <LibrarySearchDirectories>%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <AdditionalLinkerInputs>%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <AdditionalOptions />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc_ex.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc_ex.c" />
+    <ClCompile Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c" />
+    <ClCompile Include="Src\init.c" />
+    <ClCompile Include="Src\iolink.c" />
+    <ClCompile Include="Src\main.c" />
+    <ClCompile Include="Src\modbus.c" />
+    <ClCompile Include="Src\mqtt_gsm.c" />
+    <ClCompile Include="Src\stm32f4xx_hal_msp.c" />
+    <ClCompile Include="Src\stm32f4xx_it.c" />
+    <ClCompile Include="Src\tm_stm32f4_ds18b20.c" />
+    <ClCompile Include="Src\tm_stm32f4_gpio.c" />
+    <ClCompile Include="Src\tm_stm32f4_onewire.c" />
+    <ClInclude Include="Inc\edge.h" />
+    <ClInclude Include="Inc\main.h" />
+    <ClInclude Include="Inc\mqtt_gsm.h" />
+    <ClInclude Include="Inc\stm32f4xx_hal_conf.h" />
+    <ClInclude Include="Inc\stm32f4xx_it.h" />
+    <ClInclude Include="Inc\tm_stm32f4_ds18b20.h" />
+    <ClInclude Include="Inc\tm_stm32f4_gpio.h" />
+    <ClInclude Include="Inc\tm_stm32f4_onewire.h" />
+    <None Include="stm32.props" />
+    <ClCompile Include="$(BSP_ROOT)\STM32F4xxxx\StartupFiles\startup_stm32f415xx.c" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\CMSIS\Include\core_cm4.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc_ex.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc_ex.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_can.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h" />
+    <ClInclude Include="..\..\..\..\Documents\cubemx\STM32Cube_FW_F4_V1.18.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h" />
+    <None Include="EdgeFS1-Debug.vgdbsettings" />
+    <None Include="EdgeFS1-Release.vgdbsettings" />
+    <None Include="stm32.xml" />
+  </ItemGroup>
+</Project>
