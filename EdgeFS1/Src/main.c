@@ -105,7 +105,7 @@ struct MQTT_TAB mqtt[N_MQTT_TOPIC] = {
 	{ "EdgeFS1/RS485/SM/voltage", "", "%05.1f", 0.0 },
 	{ "EdgeFS1/RS485/SM/power", "", "%05.3f", 0.0 }, 
 		// in kW
-	{ "EdgeFS1/RS485/SM/pfactor", "", "%05.3f", 0.0 },
+//	{ "EdgeFS1/RS485/SM/pfactor", "", "%05.3f", 0.0 },
 	{ "EdgeFS1/DO/chan1", "", "%1.0f", 0.0 },
 	 	// relay
 	{ "EdgeFS1/DO/chan2", "", "%1.0f", 0.0 },
