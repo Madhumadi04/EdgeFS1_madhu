@@ -104,7 +104,7 @@ struct MQTT_TAB mqtt[N_MQTT_TOPIC] = {
 	{ "EdgeFS1/ADI/chan4/logical", "", "%1.0f", 0.0 },
 	{ "EdgeFS1/RS485/SM/voltage", "", "%05.1f", 0.0 },
 	{ "EdgeFS1/RS485/SM/power", "", "%05.3f", 0.0 }, 
-		//// in kW
+		// in kW
 	{ "EdgeFS1/RS485/SM/pfactor", "", "%05.3f", 0.0 },
 	{ "EdgeFS1/DO/chan1", "", "%1.0f", 0.0 },
 	 	// relay
@@ -519,7 +519,16 @@ while(true)
 					SMpfactor = *((float*)&n);
 					PRINTV("SmartMeter: Voltage = %5.1f V, Power = %6.3f kW, Power Factor = %5.3f\r\n", SMvoltage, SMpower, SMpfactor);
 					smquery = 0;
-					
+					mqtt[7].value = SMvoltage;
+					mqtt[8].value = SMpower;
+					mqtt[9].value = SMpfactor;
+					for (j = 7; j < 10; j++)
+					{
+						rtv = Mqtt_publish(j);
+						if (rtv < 0)
+							PRINTV("MQTT Publish Error No. %d, Topic %u\r\n", -rtv, j);			
+					}
+				
 					// Insert conversion of data into the structure and MQTT publishing here
 					
 					break;
